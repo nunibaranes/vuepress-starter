@@ -1,0 +1,43 @@
+// FONTS
+$roboto-r: 'Roboto-Regular';
+$roboto-m: 'Roboto-Medium';
+$roboto-b: 'Roboto-Bold';
+$roboto-l: 'Roboto-Light';
+$roboto-t: 'Roboto-Thin';
+$din-black: 'DIN-BLAC_0';
+$din-bold-a: 'DIN-BOLA_0';
+
+@font-face {
+  font-family: $roboto-r;
+  src: url('#{$base-url}assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: $roboto-m;
+  font-weight: normal;
+  src: url('#{$base-url}assets/fonts/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: $roboto-b;
+  font-weight: normal;
+  src: url('#{$base-url}assets/fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: $roboto-l;
+  font-weight: normal;
+  src: url('#{$base-url}assets/fonts/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: $roboto-t;
+  font-weight: normal;
+  src: url('#{$base-url}assets/fonts/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: $din-black;
+  font-weight: normal;
+  src: url('#{$base-url}assets/fonts/DIN-BLAC_0.OTF');
+}
+@font-face {
+  font-family: $din-bold-a;
+  font-weight: normal;
+  src: url('#{$base-url}assets/fonts/DIN-BOLA_0.OTF');
+}

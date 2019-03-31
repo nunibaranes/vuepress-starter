@@ -1,0 +1,22 @@
+@import '../templates/default-config.scss';
+
+.btn, .section, *, ul , li , div, .text{
+  &.no-mobile {
+    @media (max-width: ($mobile)) {
+      display: none !important;
+    }
+  }
+
+  &.no-tablet {
+    @media (max-width: ($tablet)) {
+      display: none !important;
+    }
+  }
+
+  &.no-desktop {
+    display: none;
+    @media (max-width: ($tablet)) {
+      display: block;
+    }
+  }
+}

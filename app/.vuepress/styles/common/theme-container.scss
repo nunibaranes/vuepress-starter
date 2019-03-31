@@ -1,0 +1,114 @@
+@import '../templates/default-config.scss';
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+
+  @media (max-width: ($wideDesktop)) {
+    max-width: 900px;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  @media (max-width: ($thinDesktop)) {
+    max-width: 700px;
+  }
+
+  @media (max-width: ($tablet)) {
+    max-width: 570px;
+  }
+
+  @media (max-width: ($mobile)) {
+    max-width: 100%;
+  }
+}
+
+
+.theme-container {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  .sidebar {
+    top: 0;
+  }
+
+  .custom-layout {
+    padding-top: 0;
+  }
+
+  .nav-links {
+    display: inline-block;
+    a {
+      line-height: 1.4rem;
+      color: inherit;
+      &:hover, &.router-link-active {
+        color: $accentColor;
+      }
+      &:visited {
+        color: $charcoal-grey;
+      }
+    }
+    .nav-item {
+      position: relative;
+      display: inline-block;
+      margin-left: 1.5rem;
+      line-height: 2rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .repo-link {
+      margin-left: 1.5rem;
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: $container-max-width;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-404 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $dodger-blue;
+    color: $white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $roboto-l;
+    padding: 20px;
+
+    .title {
+      font-family: $din-black;
+    }
+
+    p {
+      line-height: 1.56;
+    }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+      &:visited {
+        color: $white;
+      }
+    }
+    img {
+      margin-bottom: 50px;
+    }
+  }
+}

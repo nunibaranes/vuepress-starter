@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/static-website/assets/fonts/Roboto-Regular.ttf"); }
+@font-face {
+  font-family: "Roboto-Medium";
+  font-weight: normal;
+  src: url("/static-website/assets/fonts/Roboto-Medium.ttf"); }
+@font-face {
+  font-family: "Roboto-Bold";
+  font-weight: normal;
+  src: url("/static-website/assets/fonts/Roboto-Bold.ttf"); }
+@font-face {
+  font-family: "Roboto-Light";
+  font-weight: normal;
+  src: url("/static-website/assets/fonts/Roboto-Light.ttf"); }
+@font-face {
+  font-family: "Roboto-Thin";
+  font-weight: normal;
+  src: url("/static-website/assets/fonts/Roboto-Thin.ttf"); }
+@font-face {
+  font-family: "DIN-BLAC_0";
+  font-weight: normal;
+  src: url("/static-website/assets/fonts/DIN-BLAC_0.OTF"); }
+@font-face {
+  font-family: "DIN-BOLA_0";
+  font-weight: normal;
+  src: url("/static-website/assets/fonts/DIN-BOLA_0.OTF"); }
+.icon {
+  display: block;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .icon.close {
+    width: 34px;
+    height: 34px;
+    background-image: url("/static-website/assets/images/icons/close.svg"); }
+  .icon.menu {
+    width: 36px;
+    height: 23px;
+    background-image: url("/static-website/assets/images/icons/menu.svg"); }
+  .icon.right-arrow {
+    width: 34px;
+    height: 10px;
+    background-image: url("/static-website/assets/images/icons/right-arrow.svg"); }
+
+/*# sourceMappingURL=default-config.css.map */

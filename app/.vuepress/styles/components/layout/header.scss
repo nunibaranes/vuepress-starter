@@ -1,0 +1,247 @@
+@import '../../templates/default-config.scss';
+
+.main-header {
+    display: grid;
+    z-index: 10;
+    position: absolute;
+    right:0;
+    left:0;
+    top: 0;
+    transition: all 0.3s;
+
+    &.sticky {
+      position: fixed;
+      z-index: 11;
+      top: 0px;
+      transition: all 0.3s;
+
+      .navbar {
+        &:before {
+          box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &.light-mode {
+        .navbar {
+          background-color: $white;
+          @extend %bg-gray;
+          @extend %bg-dodger-blue;
+          @extend %bg-blush-pink;
+          @extend %bg-dark-gray-2;
+          @extend %bg-sapphire;
+          @extend %bg-orangey-yellow;
+          @extend %bg-aqua-marine;
+        }
+      }
+
+      &.dark-mode {
+        .navbar {
+          background-color: $black;
+          @extend %bg-gray;
+          @extend %bg-blush-pink;
+          @extend %bg-dodger-blue;
+          @extend %bg-dark-gray-2;
+          @extend %bg-sapphire;
+          @extend %bg-orangey-yellow;
+          @extend %bg-aqua-marine;
+        }
+      }
+    }
+
+  &.light-mode {
+    .actions-section {
+      .login {
+        color: $blush-pink;
+      }
+    }
+  }
+
+  &.dark-mode {
+    .actions-section {
+      .login {
+        color: $white;
+      }
+
+      .btn-book-a-demo {
+        border: solid 2px $white;
+        background-color: White;
+        box-shadow: 9px 0 0px -2px $black, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+
+        .text {
+          color: $black;
+        }
+
+        &.bg-dodger-blue {
+          border: solid 2px $white;
+          background-color: $white;
+          box-shadow: 9px 0 0px -2px $dodger-blue, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+          .text {
+            color: $dodger-blue;
+          }
+        }
+
+        &.bg-blush-pink {
+          border: solid 2px $white;
+          background-color: $white;
+          box-shadow: 9px 0 0px -2px $blush-pink, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+          .text {
+            color: $blush-pink;
+          }
+        }
+
+        &.bg-aqua-marine {
+          border: solid 2px $white;
+          background-color: $white;
+          box-shadow: 9px 0 0px -2px $aqua-marine, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+          .text {
+            color: $aqua-marine;
+          }
+        }
+
+        &.bg-orangey-yellow {
+          border: solid 2px $white;
+          background-color: $white;
+          box-shadow: 9px 0 0px -2px $orangey-yellow, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+          .text {
+            color: $orangey-yellow;
+          }
+        }
+
+        &.bg-sapphire {
+          border: solid 2px $white;
+          background-color: $white;
+          box-shadow: 9px 0 0px -2px $sapphire, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+          .text {
+            color: $sapphire;
+          }
+        }
+
+        &:hover {
+          background-color: $black;
+          box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+          .text {
+            color: $white;
+          }
+
+
+          &.bg-sapphire {
+            background-color: $sapphire;
+            box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+            .text {
+              color: $white;
+            }
+          }
+
+          &.bg-blush-pink {
+            background-color: $blush-pink;
+            box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+            .text {
+              color: $white;
+            }
+          }
+
+          &.bg-aqua-marine {
+            background-color: $aqua-marine;
+            box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+            .text {
+              color: $white;
+            }
+          }
+
+          &.bg-orangey-yellow {
+            background-color: $orangey-yellow;
+            box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+            .text {
+              color: $white;
+            }
+          }
+
+          &.bg-dodger-blue {
+            background-color: $dodger-blue;
+            box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+            .text {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .sidebar-menu {
+      color: $white;
+      .btn-menu {
+        svg > g {
+          stroke: $white;
+        }
+      }
+    }
+  }
+
+  .navbar {
+      position: relative;
+      box-sizing: border-box;
+      padding: 20px 0;
+      background-color: transparent;
+      transition: all 0.3s;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 200px;
+        top: auto;
+        right: 0;
+        left: 0;
+        box-shadow: 0 0 0 ;
+        bottom: 0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+      }
+      .logo{
+        justify-self: center;
+
+        img {
+          max-width: 180px;
+        }
+        @media (max-width: ($tablet)) {
+          justify-self: flex-end;
+          order: 3;
+          img {
+            max-width: 120px;
+          }
+        }
+      }
+  }
+
+  .sidebar-menu {
+    display: flex;
+    font-family: $roboto-b;
+    justify-content: flex-start;
+    align-items: center;
+
+    .btn-menu {
+      margin-right: 10px;
+      padding-left: 0;
+    }
+  }
+
+  .actions-section {
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    margin-right: 10px;
+
+    .login {
+      display: none;
+      font-family: $roboto-b;
+      font-weight: normal;
+      font-size: 18px;
+      color: $black;
+      margin-right: 20px;
+    }
+  }
+}

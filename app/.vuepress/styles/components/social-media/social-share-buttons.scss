@@ -1,0 +1,18 @@
+@import '../../templates/default-config';
+
+.social-share-buttons {
+  display: flex;
+  li {
+    background-color: $charcoal-grey;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+}

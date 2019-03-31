@@ -1,0 +1,96 @@
+@import '../../templates/default-config';
+
+.section {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+
+  &.white {
+    background-color: $white;
+  }
+
+  @extend %bg-gray;
+  @extend %bg-dodger-blue;
+  @extend %bg-dark-gray-2;
+  @extend %bg-gray-and-white-strip;
+  @extend %bg-sapphire;
+  @extend %bg-aqua-marine;
+  @extend %bg-orangey-yellow;
+  @extend %bg-blush-pink;
+
+  &.no-bg-color {
+    background-color: transparent;
+  }
+
+  &.strip-color {
+    &:before {
+      content: '';
+      height: 25px;
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &.top-page-section {
+    color: $white;
+
+    .content {
+      align-self: center;
+      .sub-title {
+        font-family: $din-bold-a;
+        font-weight: normal;
+        font-size: 22px;
+      }
+      .text {
+        font-family: $roboto-l;
+        font-weight: normal;
+      }
+      .pre-text {
+        font-family: $roboto-l;
+        font-weight: normal;
+        &.pre-bold {
+          font-family: $din-bold-a;
+          font-weight: normal;
+          margin-bottom: 1em;
+          font-size: 22px;
+          line-height: 1.2;
+        }
+      }
+      @media (max-width: $tablet) {
+        .sub-title {
+          font-size: 18px;
+        }
+
+        .pre-text {
+          &.pre-bold {
+            font-size: 18px;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+    .figure {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .container {
+    &.direction-columns {
+      flex-direction: column;
+    }
+  }
+
+  .section-header, .section-content, .section-footer {
+    width: 100%;
+    display: flex ;
+    box-sizing: border-box;
+  }
+
+}

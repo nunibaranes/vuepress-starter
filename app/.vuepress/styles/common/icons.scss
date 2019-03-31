@@ -1,0 +1,31 @@
+.icon {
+  display: block;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.close {
+    width: 34px;
+    height: 34px;
+    background-image: url('#{$base-url}assets/images/icons/close.svg');
+  }
+
+  &.menu {
+    width: 36px;
+    height: 23px;
+    background-image: url('#{$base-url}assets/images/icons/menu.svg');
+  }
+
+  &.right-arrow {
+    width: 34px;
+    height: 10px;
+
+    &.blush-pink {
+      background-image: url('#{$base-url}assets/images/icons/right-arrow/right-arrow-blush-pink.svg');
+    }
+
+    &.dodger-blue {
+      background-image: url('#{$base-url}assets/images/icons/right-arrow/right-arrow-dodger-blue.svg');
+    }
+  }
+}

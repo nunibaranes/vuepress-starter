@@ -1,0 +1,56 @@
+@import '../../templates/default-config.scss';
+
+.unsupported-ie-section {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $dodger-blue;
+  color: $white;
+  text-align: center;
+  align-items: center;
+  font-family: $roboto-l;
+  padding: 20px;
+
+  .title {
+    display: block;
+    font-family: $din-black;
+  }
+
+  p {
+    line-height: 1.56;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+    &:visited {
+      color: $white;
+    }
+  }
+
+  .section-header, .section-content {
+    display: block;
+  }
+
+  .section-header {
+    .unsupported-ie {
+      margin-bottom: 50px;
+    }
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+}
+

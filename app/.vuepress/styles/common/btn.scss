@@ -1,0 +1,241 @@
+@import '../templates/default-config.scss';
+
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  height: 40px;
+  padding:8px;
+  box-sizing: border-box;
+  border: solid 2px $charcoal-grey;
+  text-align: center;
+  min-width: 150px;
+  border-radius: 6px;
+  font-family: $roboto-m;
+  transition: background-color 0.3s;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 14px;
+  color: $black;
+  line-height: 1.5em;
+
+  .btn-text {
+    display: block;
+    line-height: 25px;
+  }
+
+  &.no-border {
+    border: none;
+  }
+
+  &.disable {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  &.btn-empty-with-shadow {
+    position: relative;
+    background-color: transparent;
+    border: solid 2px $charcoal-grey;
+    box-shadow: 9px 0 0px -2px $charcoal-grey, 11px 0 0px -1px $charcoal-grey, 11px 2px 0px -2px $charcoal-grey, 11px -2px 0px -2px $charcoal-grey;
+    transition: all 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    color: $charcoal-grey;
+
+    .btn-text {
+      z-index: 1;
+      font-family: $roboto-b;
+      line-height: 20px;
+    }
+
+    .inline-icon {
+      margin-left: 10px;
+      &.arrow {
+        padding-top: 3px;
+        svg > g {
+          stroke: currentColor;
+        }
+      }
+    }
+
+    &.disable {
+      color: $light-gray !important;
+      border: solid 2px $light-gray !important;
+      box-shadow: 9px 0 0px -2px $light-gray, 11px 0 0px -1px $light-gray, 11px 2px 0px -2px $light-gray, 11px -2px 0px -2px $light-gray !important;
+    }
+
+    &.white {
+      border: solid 2px $white;
+      box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+      color: $white;
+    }
+
+    &.sapphire {
+      border: solid 2px $sapphire;
+      box-shadow: 9px 0 0px -2px $sapphire, 11px 0 0px -1px $sapphire, 11px 2px 0px -2px $sapphire, 11px -2px 0px -2px $sapphire;
+      color: $sapphire;
+    }
+    &.dodger-blue {
+      border: solid 2px $dodger-blue;
+      box-shadow: 9px 0 0px -2px $dodger-blue, 11px 0 0px -1px $dodger-blue, 11px 2px 0px -2px $dodger-blue, 11px -2px 0px -2px $dodger-blue;
+      color: $dodger-blue;
+    }
+
+    &.orangey-yellow {
+      border: solid 2px $orangey-yellow;
+      box-shadow: 9px 0 0px -2px $orangey-yellow, 11px 0 0px -1px $orangey-yellow, 11px 2px 0px -2px $orangey-yellow, 11px -2px 0px -2px $orangey-yellow;
+      color: $orangey-yellow;
+    }
+
+    &.blush-pink {
+      border: solid 2px $blush-pink;
+      box-shadow: 9px 0 0px -2px $blush-pink, 11px 0 0px -1px $blush-pink, 11px 2px 0px -2px $blush-pink, 11px -2px 0px -2px $blush-pink;
+      color: $blush-pink;
+    }
+
+    &.aqua-marine {
+      border: solid 2px $aqua-marine;
+      box-shadow: 9px 0 0px -2px $aqua-marine, 11px 0 0px -1px $aqua-marine, 11px 2px 0px -2px $aqua-marine, 11px -2px 0px -2px $aqua-marine;
+      color: $aqua-marine;
+    }
+
+
+    &:hover {
+      background-color: $charcoal-grey;
+      box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $charcoal-grey, 11px 2px 0px -2px $charcoal-grey, 11px -2px 0px -2px $charcoal-grey;
+      color: $white;
+
+      &.disable {
+        color: $light-gray !important;
+        border: solid 2px $light-gray !important;
+        box-shadow: 9px 0 0px -2px $light-gray, 11px 0 0px -1px $light-gray, 11px 2px 0px -2px $light-gray, 11px -2px 0px -2px $light-gray !important;
+      }
+      &.sapphire {
+        background-color: $sapphire;
+        box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $sapphire, 11px 2px 0px -2px $sapphire, 11px -2px 0px -2px $sapphire;
+        color: $white;
+      }
+
+      &.dodger-blue {
+        background-color: $dodger-blue;
+        box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $dodger-blue, 11px 2px 0px -2px $dodger-blue, 11px -2px 0px -2px $dodger-blue;
+        color: $white;
+      }
+
+      &.orangey-yellow {
+        background-color: $orangey-yellow;
+        box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $orangey-yellow, 11px 2px 0px -2px $orangey-yellow, 11px -2px 0px -2px $orangey-yellow;
+        color: $white;
+      }
+
+      &.blush-pink {
+        background-color: $blush-pink;
+        box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $blush-pink, 11px 2px 0px -2px $blush-pink, 11px -2px 0px -2px $blush-pink;
+        color: $white;
+      }
+
+      &.aqua-marine {
+        background-color: $aqua-marine;
+        box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $aqua-marine, 11px 2px 0px -2px $aqua-marine, 11px -2px 0px -2px $aqua-marine;
+        color: $white;
+      }
+
+      &.white {
+        background-color: $white;
+        box-shadow: 9px 0 0px -2px $charcoal-grey, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+        color: $charcoal-grey;
+      }
+    }
+  }
+
+  &.btn-fill-with-shadow {
+    position: relative;
+    background-color: $charcoal-grey;
+    border: solid 2px $charcoal-grey;
+    box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $charcoal-grey, 11px 2px 0px -2px $charcoal-grey, 11px -2px 0px -2px $charcoal-grey;
+
+    transition: all 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    color: #fff;
+
+    .btn-text {
+      z-index: 1;
+      font-family: $roboto-b;
+      line-height: 20px;
+    }
+
+    .inline-icon {
+      margin-left: 10px;
+      &.arrow {
+        padding-top: 3px;
+        svg > g {
+          stroke: currentColor;
+        }
+      }
+    }
+
+    &.white {
+      border: solid 2px $white;
+      background-color: $white;
+      box-shadow: 9px 0 0px -2px $charcoal-grey, 11px 0 0px -1px $white, 11px 2px 0px -2px $white, 11px -2px 0px -2px $white;
+    }
+
+    &.dodger-blue {
+      border: solid 2px $dodger-blue;
+      background-color: $dodger-blue;
+      box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $dodger-blue, 11px 2px 0px -2px $dodger-blue, 11px -2px 0px -2px $dodger-blue;
+    }
+
+    &.sapphire {
+      border: solid 2px $sapphire;
+      background-color: $sapphire;
+      box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $sapphire, 11px 2px 0px -2px $sapphire, 11px -2px 0px -2px $sapphire;
+    }
+
+    &.aqua-marine {
+      border: solid 2px $aqua-marine;
+      background-color: $aqua-marine;
+      box-shadow: 9px 0 0px -2px $white, 11px 0 0px -1px $aqua-marine, 11px 2px 0px -2px $aqua-marine, 11px -2px 0px -2px $aqua-marine;
+    }
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: 9px 0 0px -2px $charcoal-grey, 11px 0 0px -1px $charcoal-grey, 11px 2px 0px -2px $charcoal-grey, 11px -2px 0px -2px $charcoal-grey;
+      color: $charcoal-grey;
+
+      &.white {
+        border: solid 2px $white;
+        background-color: $white;
+        box-shadow: 9px 0 0px -2px $white , 11px 0 0px -1px $charcoal-grey, 11px 2px 0px -2px $charcoal-grey, 11px -2px 0px -2px $charcoal-grey;
+      }
+
+      &.dodger-blue {
+        background-color: transparent;
+        box-shadow: 9px 0 0px -2px $dodger-blue, 11px 0 0px -1px $dodger-blue, 11px 2px 0px -2px $dodger-blue, 11px -2px 0px -2px $dodger-blue;
+        color: $dodger-blue;
+      }
+
+      &.sapphire {
+        background-color: transparent;
+        box-shadow: 9px 0 0px -2px $sapphire, 11px 0 0px -1px $sapphire, 11px 2px 0px -2px $sapphire, 11px -2px 0px -2px $sapphire;
+        color: $sapphire;
+      }
+
+      &.aqua-marine {
+        background-color: transparent;
+        box-shadow: 9px 0 0px -2px $aqua-marine, 11px 0 0px -1px $aqua-marine, 11px 2px 0px -2px $aqua-marine, 11px -2px 0px -2px $aqua-marine;
+        color: $aqua-marine;
+      }
+
+    }
+  }
+
+  &.btn-reset {
+    background: transparent;
+    border:none;
+    min-width: 0;
+    margin: 0;
+  }
+}

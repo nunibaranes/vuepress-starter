@@ -1,0 +1,53 @@
+@import '../../templates/default-config.scss';
+.list-item {
+  .group-icon {
+    @extend %group-icon-plus-minus-animation;
+
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &.open , &.close {
+      &:before, &:after {
+        transition: all 0.4s ease-in-out;
+      }
+    }
+    &:before, &:after {
+      background-color: $charcoal-grey;
+    }
+
+    &:before {
+      width: 2.5px;
+      height: 10.5px;
+      margin-top: -4px;
+      margin-left: -3px;
+    }
+    &:after {
+      height: 2.5px;
+      width: 11px;
+      margin-left: -7px;
+      margin-top: 0;
+    }
+  }
+
+  &.collapsable {
+    .list-item-content {
+      padding-left: 70px;
+      overflow: hidden;
+      transition: height .1s ease-out;
+
+      @media (max-width: $tablet) {
+        padding-left: 15px;
+      }
+    }
+  }
+  .list-item-heading {
+    cursor: pointer;
+    font-size: 22px;
+    padding-left: 20px;
+    position: relative;
+  }
+}

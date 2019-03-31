@@ -1,0 +1,230 @@
+@import '../../templates/default-config.scss';
+.sidebar-wrapper {
+  &.sidebar-close {
+    visibility: hidden;
+    transition: visibility 0.5s;
+    .sidebar-mask {
+      animation: fadeOut 0.5s;
+    }
+
+    .sidebar {
+      animation: slideOuToLeft 0.3s;
+      left: -100%;
+    }
+  }
+
+  &.sidebar-open {
+    visibility: visible;
+    .sidebar-mask {
+      animation: fadeIn 0.5s;
+      opacity: 1;
+    }
+
+    .sidebar {
+      animation: slideInFromLeft 0.3s;
+      left: 0;
+    }
+  }
+
+  .sidebar-mask {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+  }
+
+  .sidebar {
+    font-size: 15px;
+    background-color: $dodger-blue;
+    width: $sidebarWidth;
+    position: fixed;
+    z-index: 20;
+    margin: 0;
+    top: $navbarHeight;
+    left: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    color: $white;
+    padding: 5em 0 0 5em;
+    transition: left 0.5s;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-left: 1em;
+    }
+
+    .btn-close {
+      display: flex;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      padding: 0;
+      justify-content: flex-start;
+      align-items: center;
+      color: $white;
+      span {
+        height: 40px;
+      }
+      .text {
+        font-family: $din-bold-a;
+        line-height: 35px;
+        font-size: 20px;
+      }
+    }
+
+    a {
+       color: $white;
+    }
+
+    .sidebar-links {
+      padding: 1.5rem;
+      > li {
+        margin-bottom: 40px;
+
+        &.sidebar-group-4 {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+
+    .sidebar-group {
+      &:not(.first) {
+        margin-top: 1em;
+      }
+      .sidebar-group {
+        padding-left: 0.5em;
+      }
+      &:not(.collapsable) {
+        .sidebar-heading {
+          cursor: auto;
+          color: inherit;
+        }
+
+        .sidebar-link {
+          color: #fff;
+          transition: color .15s ease;
+          cursor: pointer;
+          font-size: 18px;
+          font-family: $din-bold-a;
+          padding: 0 1.5rem;
+          padding-left: 15px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .sidebar-heading {
+      color: $white;
+      transition: color .15s ease;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: $din-bold-a;
+      padding: 0 1.5rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      &.open, &:hover {
+        color: inherit;
+      }
+      &.open {
+        margin-bottom: 15px;
+      }
+      .group-icon {
+        position: relative;
+        top: 3px;
+        right: 1.5em;
+      }
+    }
+
+    .sidebar-group-items {
+      transition: height .1s ease-out;
+      overflow: hidden;
+      padding-left: 25px;
+
+      a {
+        font-family: $roboto-r;
+        font-size: 17px;
+      }
+
+      > li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .sidebar .sidebar-sub-headers {
+      padding-left: 1rem;
+      font-size: 0.95em;
+    }
+
+    a.sidebar-link {
+      font-weight: 400;
+      display: inline-block;
+      color: $white;
+      padding: 0.35rem 1rem 0.35rem 1.25rem;
+      line-height: 1.4;
+      width: 100%;
+      box-sizing: border-box;
+      &:hover {
+        color: $white;
+      }
+      &.active {
+        color: $white;
+        text-decoration: underline;
+      }
+      .sidebar-group & {
+        padding-left: 2rem;
+      }
+      .sidebar-sub-headers & {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-left: none;
+        &.active {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .dropdown-enter, .dropdown-leave-to {
+      height: 0 !important;
+    }
+
+    .arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      &.up {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 6px solid $white;
+      }
+      &.down {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid $white;
+      }
+      &.right {
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 6px solid $white;
+      }
+      &.left {
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-right: 6px solid $white;
+      }
+    }
+
+    .group-icon {
+      @extend %group-icon-plus-minus-animation;
+    }
+  }
+}
+
+

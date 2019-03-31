@@ -1,0 +1,98 @@
+@import '../default-config.scss';
+
+.default-layout {
+  .title {
+    @extend  %title;
+    margin-bottom: 1em;
+  }
+
+  .text {
+    font-family: $roboto-r;
+    font-size: 18px;
+    line-height: 1.5;
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  .top-page-section {
+    display: flex;
+    min-height: 500px;
+    padding-top: 100px;
+    color: $white;
+    align-items: center;
+    box-sizing: border-box;
+    .section-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .title, .text {
+        max-width: 620px;
+      }
+
+      .figure {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    .container {
+      display: flex;
+
+      .content , .figure{
+        flex: 1;
+      }
+
+      .figure {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .main-page-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .section-content {
+      flex-direction: column;
+    }
+
+    article {
+      @extend %markdown-article;
+      color: $charcoal-grey;
+
+      ul > li:before {
+        top: 12px;
+      }
+
+      .figure {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        &.full-width {
+          img {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+          }
+        }
+
+        &.half-width {
+          width: 50%;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .social-share-section {
+      .title {
+        font-size: 18px;
+      }
+    }
+  }
+
+}
